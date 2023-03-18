@@ -18,7 +18,7 @@ export const Tooth: FC<ToothProps> = ({ toothNumber }) => {
 		<div className="p-1 flex flex-col items-center">
 			<div
 				className={
-					"h-24 w-24 bg-[#f3f3f3f3] rounded-full border border-[#333] grid grid-cols-2 grid-rows-2 relative overflow-hidden shadow-xl"
+					" h-20 w-20 bg-[#f3f3f3f3] rounded-full border border-[#333] grid grid-cols-2 grid-rows-2 relative overflow-hidden shadow-xl"
 				}
 			>
 				{isAnterior || (

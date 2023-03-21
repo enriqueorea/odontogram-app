@@ -1,5 +1,5 @@
 // Quadrant.tsx
-import React, { FC } from "react";
+import type { FC } from "react";
 import { Tooth } from "./Tooth";
 
 interface QuadrantProps {
@@ -9,7 +9,7 @@ interface QuadrantProps {
 
 export const Quadrant: FC<QuadrantProps> = ({ quadrant, startTooth }) => {
 	const teeth = [];
-	const isUpper = quadrant === 1 || quadrant === 2;
+	//const isUpper = quadrant === 1 || quadrant === 2;
 	const toothCount = 8;
 
 	for (let i = 0; i < toothCount; i++) {
@@ -31,7 +31,7 @@ export const Quadrant: FC<QuadrantProps> = ({ quadrant, startTooth }) => {
 		<div
 			className={`flex ${
 				quadrant % 2 === 0 ? "flex-row-reverse" : "flex-row"
-			} w-full`}
+			} w-full flex-wrap justify-center items-center`}
 		>
 			{teeth}
 		</div>

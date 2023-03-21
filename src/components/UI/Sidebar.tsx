@@ -2,6 +2,10 @@ import {
 	Divider,
 	IconButton,
 	List,
+	ListItem,
+	ListItemIcon,
+	ListItemText,
+	ListItemButton,
 	styled,
 	Toolbar,
 	Typography,
@@ -9,11 +13,9 @@ import {
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { drawerWidth } from "~/constants";
 import MuiDrawer from "@mui/material/Drawer";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import DateRangeIcon from "@mui/icons-material/DateRange";
 import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
@@ -72,10 +74,11 @@ export const Sidebar = () => {
 					</ListItemIcon>
 					<ListItemText primary="Dashboard" />
 				</ListItemButton>
-				<ListItemButton>
+				<ListItemButton LinkComponent={"a"} href="/agenda">
 					<ListItemIcon>
-						<ShoppingCartIcon />
+						<DateRangeIcon />
 					</ListItemIcon>
+
 					<ListItemText primary="Agenda" />
 				</ListItemButton>
 				<ListItemButton>

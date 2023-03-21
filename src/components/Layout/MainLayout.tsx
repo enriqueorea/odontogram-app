@@ -1,4 +1,4 @@
-import { Box, Toolbar } from "@mui/material";
+import { Box } from "@mui/material";
 import type { FC, ReactNode } from "react";
 import { Navbar, Sidebar } from "../UI";
 
@@ -14,16 +14,11 @@ const MainLayout: FC<Props> = ({ children }) => {
 			<Box
 				component="main"
 				sx={{
-					backgroundColor: (theme) =>
-						theme.palette.mode === "light"
-							? theme.palette.grey[100]
-							: theme.palette.grey[900],
 					flexGrow: 1,
 					height: "100dvh",
 					overflow: "auto",
 				}}
 			>
-				<Toolbar />
 				{children}
 			</Box>
 		</Box>

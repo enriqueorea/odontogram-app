@@ -4,7 +4,7 @@ import MuiAppBar, {
 	type AppBarProps as MuiAppBarProps,
 } from "@mui/material/AppBar";
 import React from "react";
-import { drawerWidth } from "~/constants";
+import { drawerWidth } from "~/constants/dental";
 import { useUiStore } from "../../store/uiStore";
 
 interface AppBarProps extends MuiAppBarProps {

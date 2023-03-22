@@ -1,7 +1,7 @@
 import { Fade, Slide } from "@mui/material";
 import { type NextPage } from "next";
 
-import { Form } from "~/components/Form";
+import { Form } from "~/components/Odontogram/Form";
 import MainLayout from "~/components/Layout/MainLayout";
 import { Odontogram } from "~/components/Odontogram";
 import { useUiStore } from "~/store/uiStore";

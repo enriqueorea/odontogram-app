@@ -9,11 +9,11 @@ import {
 	Toolbar,
 } from "@mui/material";
 import React, { useRef, type FC } from "react";
-import { dentalDiagnoses, dentalProcedures } from "~/constants";
+import { dentalDiagnoses, dentalProcedures } from "~/constants/dental";
 import { getToothFaceNameByInitial } from "~/utils/odontograma/toothFacesNames";
 import { getToothNameByFDINumber } from "~/utils/odontograma/toothNames";
-import { useUiStore } from "../../store/uiStore";
-import { useOdontogramStore } from "../../store/odontogramStore";
+import { useUiStore } from "../../../store/uiStore";
+import { useOdontogramStore } from "../../../store/odontogramStore";
 
 // eslint-disable-next-line react/display-name
 const Form: FC = () => {

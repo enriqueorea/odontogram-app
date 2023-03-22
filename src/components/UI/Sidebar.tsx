@@ -11,7 +11,7 @@ import {
 	Typography,
 } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { drawerWidth } from "~/constants";
+import { drawerWidth } from "~/constants/dental";
 import MuiDrawer from "@mui/material/Drawer";
 
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -81,7 +81,7 @@ export const Sidebar = () => {
 
 					<ListItemText primary="Agenda" />
 				</ListItemButton>
-				<ListItemButton>
+				<ListItemButton LinkComponent={"a"} href="/pacientes">
 					<ListItemIcon>
 						<PeopleIcon />
 					</ListItemIcon>

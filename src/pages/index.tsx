@@ -1,10 +1,12 @@
 import { Fade, Slide } from "@mui/material";
-import { type NextPage } from "next";
+import { type GetServerSidePropsContext, type NextPage } from "next";
 
 import { Form } from "~/components/Odontogram/Form";
 import MainLayout from "~/components/Layout/MainLayout";
 import { Odontogram } from "~/components/Odontogram";
 import { useUiStore } from "~/store/uiStore";
+import { authOptions } from "~/server/auth";
+import { getServerSession } from "next-auth/next";
 
 const Home: NextPage = () => {
 	const { isCapturing } = useUiStore();
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
 								minHeight: "1px",
 							}}
 						>
-							<Form face="B" toothNumber={11} />
+							<Form />
 						</div>
 					</Slide>
 				) : (
@@ -46,5 +48,20 @@ const Home: NextPage = () => {
 		</MainLayout>
 	);
 };
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+	const session = await getServerSession(context.req, context.res, authOptions);
+
+	// If the user is already logged in, redirect.
+	// Note: Make sure not to redirect to the same page
+	// To avoid an infinite loop!
+	if (!session) {
+		return { redirect: { destination: "/auth/iniciar-sesion" } };
+	}
+
+	return {
+		props: {},
+	};
+}
 
 export default Home;

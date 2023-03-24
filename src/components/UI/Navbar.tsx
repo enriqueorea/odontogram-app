@@ -6,6 +6,7 @@ import MuiAppBar, {
 import React from "react";
 import { drawerWidth } from "~/constants/dental";
 import { useUiStore } from "../../store/uiStore";
+import { UserProfile } from ".";
 
 interface AppBarProps extends MuiAppBarProps {
 	open?: boolean;
@@ -60,6 +61,7 @@ export const Navbar = () => {
 				>
 					Dashboard
 				</Typography>
+				<UserProfile />
 			</Toolbar>
 		</AppBar>
 	);

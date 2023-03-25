@@ -13,7 +13,7 @@ import { useState, type MouseEvent } from "react";
 const settings = ["Logout"];
 
 export const UserProfile = () => {
-	const { data, status } = useSession();
+	const { data } = useSession();
 
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -54,7 +54,8 @@ export const UserProfile = () => {
 					<MenuItem key={setting} onClick={handleCloseUserMenu}>
 						<Typography
 							component={"button"}
-							onClick={() => signOut()}
+							// eslint-disable-next-line @typescript-eslint/no-misused-promises
+							onClick={() => signOut({ callbackUrl: "/" })}
 							textAlign="center"
 						>
 							{setting}

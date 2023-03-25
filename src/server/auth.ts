@@ -68,6 +68,7 @@ export const authOptions: NextAuthOptions = {
   ],
   pages: {
     signIn: "/auth/iniciar-sesion",
+    signOut: "/", // <-- this is the default value
   },
 };
 

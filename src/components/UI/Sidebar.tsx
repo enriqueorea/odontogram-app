@@ -2,7 +2,6 @@ import {
 	Divider,
 	IconButton,
 	List,
-	ListItem,
 	ListItemIcon,
 	ListItemText,
 	ListItemButton,
@@ -68,7 +67,7 @@ export const Sidebar = () => {
 			</Toolbar>
 			<Divider />
 			<List component="nav">
-				<ListItemButton>
+				<ListItemButton LinkComponent={"a"} href="/dashboard">
 					<ListItemIcon>
 						<DashboardIcon />
 					</ListItemIcon>

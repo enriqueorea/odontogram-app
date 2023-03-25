@@ -11,7 +11,7 @@ const lightTheme: Theme = createTheme({
 			main: "#f44336", // Rojo personalizado para el tema claro
 		},
 		background: {
-			default: "rgba(38,115,184,.5);",
+			default: "rgba(80,115,184,.2);",
 		},
 	},
 
